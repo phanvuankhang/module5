@@ -39,7 +39,7 @@
 
     //Task 2
     let filterCourses = courses.filter(course => course.rating < 4);
-    let formatCourses = filterCourses.map(course =>`${course.id}-${course.title}-${course.rating}`);
+    let formatCourses = filterCourses.map(course => `${course.id}-${course.title}-${course.rating}`);
     console.log(formatCourses);
 
     //Task 3
@@ -60,7 +60,7 @@
             rating: 3.8,
         }
     ];
-    let mergeCourses =[...courses, ...addedCourses];
+    let mergeCourses = [...courses, ...addedCourses];
     console.log(mergeCourses);
 </script>
 </body>
