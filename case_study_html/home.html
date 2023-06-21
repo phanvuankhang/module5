@@ -11,263 +11,169 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-<header class="navbar navbar-expand-lg navbar-dark">
+<header class="navbar navbar-expand-lg navbar-dark" style="background-color: white">
     <div class="col-1">
         <div class="m-1" style="width: 150px;">
             <a href="">
-                <img src="https://cdn.nhanlucnganhluat.vn/uploads/images/051D288B/logo/2018-12/Logo-FURAMA-RESORT.jpg"
+                <img src="data:image/jpeg;base64,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"
                      alt="Furama resort" style="width: 100%">
             </a>
         </div>
     </div>
 </header>
-<div class="container-fluid px-0">
-    <nav class="navbar navbar-expand-md navbar-light bg-white p-0">
-        <a class="navbar-brand mr-4" href="#"><strong>BBBootstrap</strong></a>
-
-        <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #653399">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products<span class="fa fa-angle-down"></span></a>
-                    <div class="dropdown-menu" id="dropdown-menu1" aria-labelledby="navbarDropdown1">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="row d-flex tab">
-                                        <div class="fa-icon text-center">
-                                            <span class="fa fa-shopping-cart"></span>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <a class="dropdown-item" href="#">
-                                                <h6 class="mb-0">WearCMS</h6>
-                                                <small class="text-muted">For your project</small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row d-flex tab">
-                                        <div class="fa-icon text-center">
-                                            <span class="fa fa-gamepad"></span>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <a class="dropdown-item" href="#">
-                                                <h6 class="mb-0">Game+</h6>
-                                                <small class="text-muted">Monetization of games</small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="row d-flex tab">
-                                        <div class="fa-icon text-center">
-                                            <span class="fa fa-video-camera"></span>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <a class="dropdown-item" href="#">
-                                                <h6 class="mb-0">Streetcam</h6>
-                                                <small class="text-muted">Keep track all year</small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row d-flex tab">
-                                        <div class="fa-icon text-center">
-                                            <span class="fa fa-comment"></span>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <a class="dropdown-item" href="#">
-                                                <h6 class="mb-0">Teamne</h6>
-                                                <small class="text-muted">Teamwork</small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="row d-flex tab">
-                                        <div class="fa-icon text-center">
-                                            <span class="fa fa-briefcase"></span>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <a class="dropdown-item" href="#">
-                                                <h6 class="mb-0">Prospec</h6>
-                                                <small class="text-muted">Solutions for your business</small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row d-flex tab">
-                                        <div class="fa-icon text-center">
-                                            <span class="fa fa-bolt"></span>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <a class="dropdown-item" href="#">
-                                                <h6 class="mb-0">Booster</h6>
-                                                <small class="text-muted">Increase engagement</small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a class="nav-link active" aria-current="page" href="#">Furama Resort</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources<span class="fa fa-angle-down"></span></a>
-                    <div class="dropdown-menu" id="dropdown-menu2" aria-labelledby="navbarDropdown2">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="row d-flex tab">
-                                        <div class="fa-icon text-center">
-                                            <span class="fa fa-folder"></span>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <a class="dropdown-item" href="#">
-                                                <h6 class="mb-0">WhitePaper</h6>
-                                                <small class="text-muted">Marketing and report</small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row d-flex tab">
-                                        <div class="fa-icon text-center">
-                                            <span class="fa fa-question"></span>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <a class="dropdown-item" href="#">
-                                                <h6 class="mb-0">FAQs</h6>
-                                                <small class="text-muted">Qs and answers</small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="row d-flex tab">
-                                        <div class="fa-icon text-center">
-                                            <span class="fa fa-calculator"></span>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <a class="dropdown-item" href="#">
-                                                <h6 class="mb-0">Tools</h6>
-                                                <small class="text-muted">All tools</small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row d-flex tab">
-                                        <div class="fa-icon text-center">
-                                            <span class="fa fa-paper-plane"></span>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <a class="dropdown-item" href="#">
-                                                <h6 class="mb-0">Success Stories</h6>
-                                                <small class="text-muted">Experiences</small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a class="nav-link active" href="#">Link</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Customers<span class="fa fa-angle-down"></span></a>
-                    <div class="dropdown-menu" id="dropdown-menu3" aria-labelledby="navbarDropdown3">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="row d-flex tab">
-                                        <div class="fa-icon text-center">
-                                            <span class="fa fa-feed"></span>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <a class="dropdown-item" href="#">
-                                                <h6 class="mb-0">Feedback</h6>
-                                                <small class="text-muted">Opinions, complaints</small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="row d-flex tab">
-                                        <div class="fa-icon text-center">
-                                            <span class="fa fa-question"></span>
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            <a class="dropdown-item" href="#">
-                                                <h6 class="mb-0">FAQs</h6>
-                                                <small class="text-muted">Qs and answers</small>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
                 </li>
             </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-warning" type="submit">Search</button>
+            </form>
         </div>
-    </nav>
+    </div>
+</nav>
+<header>
+    <div id="indicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active"  style="background-image: url('https://btnmt.1cdn.vn/2020/05/30/lln_pv_04_resortnhinvila.jpg');height: 80%">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3  class="display-4" style="color: white;margin-bottom: 10%">ROOMS & SUITES</h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<button class="btn btn-success"style="margin-top: 5px">Add New Service</button>
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div> <img src="https://i.imgur.com/7cNRozs.jpg" class="img-responsive image"> </div>
+                <p class="rating">9.2</p>
+                <div class="card-body">
+                    <h5 class="card-title">OCEAN SUITE</h5>
+                    <p class="card-text"><i class="fa fa-map-marker marker"></i> Room size: 43.7 m2</p>
+                    <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                    <p class="card-text">$ 1,399</p>
+                    <div style="margin-left: 135px">
+                        <button class="btn btn-outline-danger">Delete</button>
+                        <button class="btn btn-outline-warning"> Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div> <img src="https://i.imgur.com/CS59IJZ.jpg" class="img-responsive image"> </div>
+                <p class="rating">9.6</p>
+                <div class="card-body">
+                    <h5 class="card-title">OCEAN STUDIO SUITE</h5>
+                    <p class="card-text"><i class="fa fa-map-marker marker"></i> Room size: 43.7 m2</p>
+                    <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                    <p class="card-text">$ 2,399</p>
+                    <div style="margin-left: 135px">
+                        <button class="btn btn-outline-danger">Delete</button>
+                        <button class="btn btn-outline-warning"> Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div> <img src="https://i.imgur.com/LITAKvq.jpg" class="img-responsive image"> </div>
+                <p class="rating">8.2</p>
+                <div class="card-body">
+                    <h5 class="card-title">OCEAN DELUXE</h5>
+                    <p class="card-text"><i class="fa fa-map-marker marker"></i>Room size: 43.7 m2</p>
+                    <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                    <p class="card-text">$ 1,699</p>
+                    <div style="margin-left: 135px">
+                        <button class="btn btn-outline-danger">Delete</button>
+                        <button class="btn btn-outline-warning"> Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="row">
-    <div class="card col-4 p-0" >
-        <img src="https://premiervillagehalongbayresort.com/wp-content/uploads/2019/08/Bản-sao-của-775A8349-1.jpg"
-             class="card-img-top" alt="..." style="height: 300px">
-        <div class="card-body text-center" style="height: 120px">
-            <h5 class="card-title">Dịch vụ</h5>
-            <p class="card-text">
-                Dịch vụ sang trọng đẳng cấp quốc tế. Thiết kế tràn đầy cảm hứng để trọn vẹn kỳ nghỉ.
-            </p>
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div> <img src="https://i.imgur.com/7cNRozs.jpg" class="img-responsive image"> </div>
+                <p class="rating">9.2</p>
+                <div class="card-body">
+                    <h5 class="card-title">LAGOON SUPERIOR</h5>
+                    <p class="card-text"><i class="fa fa-map-marker marker"></i> Room size: 43.7 m2</p>
+                    <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                    <p class="card-text">$ 1,399</p>
+                    <div style="margin-left: 135px">
+                        <button class="btn btn-outline-danger">Delete</button>
+                        <button class="btn btn-outline-warning"> Edit</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="card-body text-center">
-            <a href="#" class="btn btn-warning">Dịch vụ</a>
+        <div class="col-md-4">
+            <div class="card">
+                <div> <img src="https://i.imgur.com/CS59IJZ.jpg" class="img-responsive image"> </div>
+                <p class="rating">9.6</p>
+                <div class="card-body">
+                    <h5 class="card-title">GARDEN SUPERIOR</h5>
+                    <p class="card-text"><i class="fa fa-map-marker marker"></i> Room size: 43.7 m2</p>
+                    <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                    <p class="card-text">$ 2,399</p>
+                    <div style="margin-left: 135px">
+                        <button class="btn btn-outline-danger">Delete</button>
+                        <button class="btn btn-outline-warning"> Edit</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="card col-4 p-0" >
-        <img src="https://premiervillagehalongbayresort.com/wp-content/uploads/2021/06/Nha-hang-tai-PRemier-Village-Halong-Bay-1-scaled.jpg"
-             class="card-img-top" alt="..." style="height: 300px">
-        <div class="card-body text-center" style="height: 120px">
-            <h5 class="card-title">Nhân viên</h5>
-            <p class="card-text">
-                Nhân viên nhiệt tình. Được đào tạo đẳng cấp quốc tế
-            </p>
-        </div>
-        <div class="card-body text-center">
-            <a href="#" class="btn btn-warning">Nhân viên</a>
-        </div>
-    </div>
-    <div class="card col-4 p-0" >
-        <img src="https://premiervillagehalongbayresort.com/wp-content/uploads/2021/06/Spa3-2.png"
-             class="card-img-top" alt="..." style="height: 300px">
-        <div class="card-body text-center" style="height: 120px">
-            <h5 class="card-title">Khách hàng</h5>
-            <p class="card-text">
-                Khách hàng giàu có, chịu chơi, nhiệt tình
-            </p>
-        </div>
-        <div class="card-body text-center">
-            <a href="#" class="btn btn-warning">Khách hàng</a>
+        <div class="col-md-4">
+            <div class="card">
+                <div> <img src="https://i.imgur.com/LITAKvq.jpg" class="img-responsive image"> </div>
+                <p class="rating">8.2</p>
+                <div class="card-body">
+                    <h5 class="card-title">POOL VILLAS</h5>
+                    <p class="card-text"><i class="fa fa-map-marker marker"></i>Room size: 40.1 m2</p>
+                    <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                    <p class="card-text">$ 1,699</p>
+                    <div style="margin-left: 135px">
+                        <button class="btn btn-outline-danger">Delete</button>
+                        <button class="btn btn-outline-warning"> Edit</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <footer class=" text-center text-lg-start" style="color: white">
-    <div class="text-center p-3" style="background-color: #3E469E;">
+    <div class="text-center p-3" style="background-color: #653399;">
         © 2023 Copyright:
-        <a class="text-light" href="/index.jsp" style="text-decoration: none">Furama Resort Đà Nẵng</a>
+        <a class="text-light" href="/index.jsp" style="text-decoration: none">Furama Resort</a>
     </div>
 </footer>
 </body>
