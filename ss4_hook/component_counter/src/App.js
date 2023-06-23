@@ -15,7 +15,7 @@ export function useIncrement(addAmount) {
 }
 
 function Counter1() {
-    const [count, setCount] = useIncrement(1);
+    const [count, setCount] = useIncrement(0);
 
     return (
         <div>
@@ -26,7 +26,7 @@ function Counter1() {
 }
 
 function Counter2() {
-    const [count, setCount] = useIncrement(5);
+    const [count, setCount] = useIncrement(0);
 
     return (
         <div>
