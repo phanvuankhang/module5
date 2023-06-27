@@ -75,9 +75,8 @@ export function ContactForm() {
                                                     :
                                                     <div className="text-center mt-4 btn-group">
 
-                                                        <button type="submit" className=" btn btn-success integration"
-                                                                style={{backgroundColor: "#653399"}}>
-                                                            <b>Save</b>
+                                                        <button type="submit" className=" btn btn-success integration">
+                                                            <b>Submit</b>
                                                         </button>
 
                                                     </div>

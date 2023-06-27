@@ -6,7 +6,7 @@ export function Counter2() {
     return (
         <>
             <p>Count: {count}</p>
-            <button onClick={() => setCount(5)}>Add 2</button>
+            <button onClick={() => setCount(2)}>Add 2</button>
         </>
     )
 }

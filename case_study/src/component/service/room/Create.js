@@ -9,8 +9,7 @@ export function CreateRoom() {
                         <div style={{textAlign: "center"}}>
                             <h1 style={{color: "#653399"}}>Create Room</h1>
                         </div>
-                        <form
-                        >
+                        <form>
 
                             <div className="mt-4 inputs"><span>Room</span>
                                 <input type="text" className="form-control"/>
