@@ -54,77 +54,77 @@
     </div>
 </nav>
     <!-----------------Nút trở lại thêm mới tiêu đề----------------->
-    <div>
-        <div class="row text-center align-items-center" style="border-bottom: 2px black solid">
-            <div class="col-1">
-                <button type="button" class="btn btn-outline-success">
-                    <a style="text-decoration: none; color: black" href="/">Back</a>
-                </button>
-            </div>
-            <div class="col-10">
-                <h1 class="my-1">CUSTOMERS OF LIST</h1>
-            </div>
-            <div class="col-1">
-                <button type="button" class="btn btn-outline-success">
-                    <a style="text-decoration: none; color: black" href="/customer/create ">Add New</a>
-                </button>
-            </div>
+<div>
+    <div class="row text-center align-items-center" style="border-bottom: 2px black solid">
+        <div class="col-1">
+            <button type="button" class="btn btn-outline-success">
+                <a style="text-decoration: none; color: black" href="/">Back</a>
+            </button>
         </div>
-        <!-----------------Bảng dảnh sách----------------->
-        <table class="table table-striped table-hover" style="width: 100%" id="tableCustomer" >
-            <thead>
-            <tr class="align-middle text-center">
-                <th scope="col">No</th>
-                <th scope="col">Customer Name</th>
-                <th scope="col">Customer Type</th>
-                <th scope="col">Date Of Birth</th>
-                <th scope="col">Gender</th>
-                <th scope="col">CCCD Number</th>
-                <th scope="col">Phone Number</th>
-                <th scope="col">Email</th>
-                <th scope="col">Address</th>
-                <th scope="col">Actions</th>
-            </tr>
-            </thead>
-            <tbody >
-            <tr>
-                <th></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <a class="btn btn-outline-warning ">
-                        Edit
-                    </a>
-                    <a class="btn btn-outline-danger ">
-                        Delete
-                    </a>
-                </td>
-                </tr>
-            </tbody>
-        </table>
-        <!--        ---------------Nút phân trang----------------->
-        <div class="row" style="margin: 0; padding: 0">
-            <div class="col-4"></div>
-            <div class="col-1">
-                <a class="btn btn-outline-success">
-                    Previous
-                </a>
-            </div>
-            <div class="col-2 text-center">
-                <p class="text-success" style="margin-top: 5px">Page / page</p>
-            </div>
-            <div class="col-1">
-                <a class="btn btn-outline-success">Next</a>
-            </div>
-            <div class="col-4"></div>
+        <div class="col-10">
+            <h1 class="my-1">CUSTOMERS OF LIST</h1>
+        </div>
+        <div class="col-1">
+            <button type="button" class="btn btn-outline-success">
+                <a style="text-decoration: none; color: black" href="/customer/create ">Add New</a>
+            </button>
         </div>
     </div>
+    <!-----------------Bảng dảnh sách----------------->
+    <table class="table table-striped table-hover" style="width: 100%" id="tableCustomer">
+        <thead>
+        <tr class="align-middle text-center">
+            <th scope="col">No</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Customer Type</th>
+            <th scope="col">Date Of Birth</th>
+            <th scope="col">Gender</th>
+            <th scope="col">CCCD Number</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <a class="btn btn-outline-warning ">
+                    Edit
+                </a>
+                <a class="btn btn-outline-danger ">
+                    Delete
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <!--        ---------------Nút phân trang----------------->
+    <div class="row" style="margin: 0; padding: 0">
+        <div class="col-4"></div>
+        <div class="col-1">
+            <a class="btn btn-outline-success">
+                Previous
+            </a>
+        </div>
+        <div class="col-2 text-center">
+            <p class="text-success" style="margin-top: 5px">Page / page</p>
+        </div>
+        <div class="col-1">
+            <a class="btn btn-outline-success">Next</a>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
 
 <footer class=" text-center text-lg-start" style="color: white">
     <div class="text-center p-3" style="background-color: #653399;">
@@ -132,27 +132,27 @@
         <a class="text-light" href="/index.jsp" style="text-decoration: none">Furama Resort</a>
     </div>
 </footer>
-    <!-- Modal -->
-    <form action="/customer/remove">
-        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Delete customer ?</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Do you want to delete this <span id="deleteName"></span> ?</p>
-                        <input type="text" hidden id="deleteId" name="id">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save</button>
-                    </div>
+<!-- Modal -->
+<form action="/customer/remove">
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete customer ?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Do you want to delete this <span id="deleteName"></span> ?</p>
+                    <input type="text" hidden id="deleteId" name="id">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>
-    </form>
+    </div>
+</form>
 </div>
 
 </body>

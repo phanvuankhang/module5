@@ -1,19 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import {CreateHouse} from "./component/service/house/Create";
+
 import React from "react";
-import {EditHouse} from "./component/service/house/Edit";
+import {Routes, Route} from 'react-router-dom'
 import {ListService} from "./component/service/ListService";
-import {CreateRoom} from "./component/service/room/Create";
-import {EditRoom} from "./component/service/room/Edit";
-import {CreateVilla} from "./component/service/villa/Create";
-import {EditVilla} from "./component/service/villa/Edit";
+import {Header} from "./component/Header";
+import {Footer} from "./component/Footer";
 
 function App() {
-  return (
-   <EditVilla/>
-
-  );
+    return (
+        <>
+            <Header/>
+            <Routes>
+                <Route path='/' element={<ListService/>}/>
+            </Routes>
+            <Footer/>
+        </>
+    );
 }
 
 export default App;

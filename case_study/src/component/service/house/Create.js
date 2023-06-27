@@ -1,6 +1,3 @@
-import '../service.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 
 export function CreateHouse() {
