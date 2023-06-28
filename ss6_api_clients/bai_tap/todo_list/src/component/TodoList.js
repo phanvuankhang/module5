@@ -57,13 +57,13 @@ export function TodoList() {
                     )
                 }
             </Formik>
-            {
-                todo.map((todo)=>(
                     <ul key={todo.id}>
+                        {
+                        todo.map((todo)=>(
                         <li>{todo.title}</li>
+                        ))
+                        }
                     </ul>
-                ))
-            }
         </>
     )
 }

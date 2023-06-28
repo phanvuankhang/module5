@@ -1,3 +1,175 @@
 {
-
+  "service-list": [
+    {
+      "id": 1,
+      "img": "https://pix8.agoda.net/hotelImages/34612856/0/fcbf65bd1a98a65a3d42fd4c73f96229.jpg?ce=0&s=1024x768",
+      "name": "json-server",
+      "price": "typicode",
+      "size": "typicode"
+    },
+    {
+      "id": 1,
+      "img": "https://pix8.agoda.net/hotelImages/34612856/0/fcbf65bd1a98a65a3d42fd4c73f96229.jpg?ce=0&s=1024x768",
+      "name": "json-server",
+      "price": "typicode",
+      "size": "typicode"
+    },
+    {
+      "id": 1,
+      "img": "https://pix8.agoda.net/hotelImages/34612856/0/fcbf65bd1a98a65a3d42fd4c73f96229.jpg?ce=0&s=1024x768",
+      "name": "json-server",
+      "price": "typicode",
+      "size": "typicode"
+    },
+    {
+      "id": 1,
+      "img": "https://pix8.agoda.net/hotelImages/34612856/0/fcbf65bd1a98a65a3d42fd4c73f96229.jpg?ce=0&s=1024x768",
+      "name": "json-server",
+      "price": "typicode",
+      "size": "typicode"
+    },
+    {
+      "id": 1,
+      "img": "https://pix8.agoda.net/hotelImages/109/10953/10953_17080818360055125836.jpg?ca=13&ce=1&s=1024x768",
+      "name": "json-server",
+      "price": "typicode",
+      "size": "typicode"
+    },
+    {
+      "id": 1,
+      "img": "https://pix8.agoda.net/hotelImages/34612856/0/fcbf65bd1a98a65a3d42fd4c73f96229.jpg?ce=0&s=1024x768",
+      "name": "json-server",
+      "price": "typicode",
+      "size": "typicode"
+    },
+    {
+      "id": 1,
+      "img": "https://pix8.agoda.net/hotelImages/109/10953/10953_17080818360055125836.jpg?ca=13&ce=1&s=1024x768",
+      "name": "json-server",
+      "price": "typicode",
+      "size": "typicode"
+    },
+    {
+      "id": 1,
+      "img": "https://pix8.agoda.net/hotelImages/109/10953/10953_17080818360055125836.jpg?ca=13&ce=1&s=1024x768",
+      "name": "json-server",
+      "price": "typicode",
+      "size": "typicode"
+    }
+  ],
+  "customer-list": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "customerType": "typicode",
+      "dateOfBirth": "typicode",
+      "gender": "typicode",
+      "cccd": "typicode",
+      "phone": "typicode",
+      "email": "typicode",
+      "address": "typicode"
+    },
+    {
+      "id": 1,
+      "name": "json-server",
+      "customerType": "typicode",
+      "dateOfBirth": "typicode",
+      "gender": "typicode",
+      "cccd": "typicode",
+      "phone": "typicode",
+      "email": "typicode",
+      "address": "typicode"
+    },
+    {
+      "id": 1,
+      "name": "json-server",
+      "customerType": "typicode",
+      "dateOfBirth": "typicode",
+      "gender": "typicode",
+      "cccd": "typicode",
+      "phone": "typicode",
+      "email": "typicode",
+      "address": "typicode"
+    },
+    {
+      "id": 1,
+      "name": "json-server",
+      "customerType": "typicode",
+      "dateOfBirth": "typicode",
+      "gender": "typicode",
+      "cccd": "typicode",
+      "phone": "typicode",
+      "email": "typicode",
+      "address": "typicode"
+    },
+    {
+      "id": 1,
+      "name": "json-server",
+      "customerType": "typicode",
+      "dateOfBirth": "typicode",
+      "gender": "typicode",
+      "cccd": "typicode",
+      "phone": "typicode",
+      "email": "typicode",
+      "address": "typicode"
+    }
+    ],
+  "contract-list": [
+    {
+      "id": 1,
+      "code": "json-server",
+      "startDay": "typicode",
+      "endDay": "typicode",
+      "deposit": "typicode",
+      "amount": "typicode"
+    },
+    {
+      "id": 1,
+      "code": "json-server",
+      "startDay": "typicode",
+      "endDay": "typicode",
+      "deposit": "typicode",
+      "amount": "typicode"
+    },
+    {
+      "id": 1,
+      "code": "json-server",
+      "startDay": "typicode",
+      "endDay": "typicode",
+      "deposit": "typicode",
+      "amount": "typicode"
+    },
+    {
+      "id": 1,
+      "code": "json-server",
+      "startDay": "typicode",
+      "endDay": "typicode",
+      "deposit": "typicode",
+      "amount": "typicode"
+    },
+    {
+      "id": 1,
+      "code": "json-server",
+      "startDay": "typicode",
+      "endDay": "typicode",
+      "deposit": "typicode",
+      "amount": "typicode"
+    },
+    {
+      "id": 1,
+      "code": "json-server",
+      "startDay": "typicode",
+      "endDay": "typicode",
+      "deposit": "typicode",
+      "amount": "typicode"
+    },
+    {
+      "id": 1,
+      "code": "json-server",
+      "startDay": "typicode",
+      "endDay": "typicode",
+      "deposit": "typicode",
+      "amount": "typicode"
+    }
+    ]
 }

@@ -63,6 +63,11 @@ body {
 .star-rating {
     color: #f7b944
 }
+
+
+
+
+
 .page-link {
     position: relative;
     display: block;
@@ -308,3 +313,4 @@ body{
     border-radius: 0.25rem;
     display: none;
 }
+

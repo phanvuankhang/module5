@@ -1,4 +1,15 @@
+import React, {useEffect, useState} from "react";
+import CustomerService from "../../services/CustomerService";
+
 export function CustomerList() {
+    const [customer,setCustomer]=useState([]);
+    useEffect(()=>{
+        const fetchApi=async ()=>{
+            const result=await CustomerService.findAll()
+            setCustomer(result)
+        }
+        fetchApi()
+    },[])
     return (
         <>
         <div>
@@ -19,7 +30,7 @@ export function CustomerList() {
             </div>
 
 
-            <table className="table table-striped table-hover" style="width: 100%" id="tableCustomer">
+            <table className="table table-striped table-hover" style={{width: "100%"}} id="tableCustomer">
                 <thead>
                 <tr className="align-middle text-center">
                     <th scope="col">No</th>
@@ -35,44 +46,42 @@ export function CustomerList() {
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <a className="btn btn-outline-warning ">
-                            Edit
-                        </a>
-                        <a className="btn btn-outline-danger ">
-                            Delete
-                        </a>
-                    </td>
-                </tr>
+                {
+                    customer.map(customer=>(
+                        <tr key={customer.id} className="align-middle text-center">
+                            <th>{customer.id}</th>
+                            <td>{customer.name}</td>
+                            <td>{customer.customerType}</td>
+                            <td>{customer.dateOfBirth}</td>
+                            <td>{customer.gender}</td>
+                            <td>{customer.cccd}</td>
+                            <td>{customer.phone}</td>
+                            <td>{customer.email}</td>
+                            <td>{customer.address}</td>
+                            <td>
+                                <div>
+                                    <button className="btn btn-danger">Delete</button>
+                                    <button style={{marginLeft: "5px"}}
+                                            className="btn btn-warning"> Edit
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    ))
+                }
                 </tbody>
             </table>
 
 
-            <div className="row" style={{margin: "0", padding: "0"}}>
-                <div className="col-4"></div>
-                <div className="col-1">
-                    <a className="btn btn-outline-success">
-                        Previous
-                    </a>
-                </div>
-                <div className="col-2 text-center">
-                    <p className="text-success" style={{marginTop: "5px"}}>Page / page</p>
-                </div>
-                <div className="col-1">
-                    <a className="btn btn-outline-success">Next</a>
-                </div>
-                <div className="col-4"></div>
-            </div>
+            <nav aria-label="Page navigation example" style={{marginLeft: "42vw"}}>
+                <ul className="pagination">
+                    <li className="page-item"><a className="page-link" href="#">Previous</a></li>
+                    <li className="page-item"><a className="page-link" href="#">1</a></li>
+                    <li className="page-item"><a className="page-link" href="#">2</a></li>
+                    <li className="page-item"><a className="page-link" href="#">3</a></li>
+                    <li className="page-item"><a className="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
         </div>
 </>
 )

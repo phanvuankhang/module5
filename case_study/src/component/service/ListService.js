@@ -2,16 +2,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './listService.css'
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
-import * S
+import ServiceService from "../../services/ServiceService";
+
 
 export function ListService() {
-    const navigate=useNavigate();
-    const [service,setService]=useState([]);
-    useEffect(()=>{
-const fetchApi=async ()=>{
-const result=await ServiceService
-}
-    })
+    const navigate = useNavigate();
+    const [service, setService] = useState([]);
+    useEffect(() => {
+        const fetchApi = async () => {
+            const result = await ServiceService.findAll()
+            setService(result)
+        }
+        fetchApi();
+    }, [])
     return (
         <>
 
@@ -25,7 +28,7 @@ const result=await ServiceService
                                     type="video/mp4"/>
                             </video>
                             <div className="carousel-caption d-none d-md-block">
-                                <h3 className="display-4" style={{color: "#653399", marginBottom: "10%"}}>ROOMS &
+                                <h3 className="display-4" style={{color: "#653399", marginBottom: "2%"}}>ROOMS &
                                     SUITES</h3>
                             </div>
                         </div>
@@ -34,35 +37,43 @@ const result=await ServiceService
             </header>
 
 
-            <button className="btn btn-success" style={{marginTop: "5px",marginLeft:"45vw", background:"#653399"}} onClick={()=>navigate("/create-service")} >Add New Service</button>
-            {
-                <div className="container d-flex justify-content-center">
-                    <div className="row">
-                        <div className="">
-                            <div className="card">
-                                <div><img src="https://i.imgur.com/7cNRozs.jpg" className="img-responsive image"/></div>
-                                <p className="rating">9.2</p>
-                                <div className="card-body">
-                                    <h5 className="card-title">OCEAN SUITE</h5>
-                                    <p className="card-text"><i className="fa fa-map-marker marker"></i> Room size: 43.7
-                                        m2
-                                    </p>
-                                    <p className="card-text"><i className="fa fa-star star-rating"></i><i
-                                        className="fa fa-star star-rating"></i><i
-                                        className="fa fa-star star-rating"></i><i
-                                        className="fa fa-star star-rating"></i></p>
-                                    <p className="card-text">$ 1,399</p>
-                                    <div style={{marginLeft: "135px"}}>
-                                        <button className="btn btn-outline-danger">Delete</button>
-                                        <button style={{marginLeft: "5px"}} className="btn btn-outline-warning"> Edit
-                                        </button>
+            <button className="btn btn-success" style={{marginTop: "20px", marginLeft: "45vw", background: "#653399"}}
+                    onClick={() => navigate("/create-services")}>Add New Service
+            </button>
+
+            <div className="container d-flex justify-content-center">
+                <div className="row">
+                    {
+                        service.map(service => (
+                            <div className="col-md-3">
+                                < div className="card" style={{marginTop:"25px"}}>
+                                    <div><img src={service.img} width="400px" height="200px" className="img-responsive image"/>
+                                    </div>
+                                    <p className="rating">9.2</p>
+                                    <div className="card-body">
+                                        <h5 className="card-title">{service.name}</h5>
+                                        <p className="card-text"><i className="fa fa-map-marker marker"></i> Room size:
+                                            {service.size}
+                                            m2
+                                        </p>
+                                        <p className="card-text"><i className="fa fa-star star-rating"></i><i
+                                            className="fa fa-star star-rating"></i><i
+                                            className="fa fa-star star-rating"></i><i
+                                            className="fa fa-star star-rating"></i></p>
+                                        <p className="card-text">$ {service.price}</p>
+                                        <div style={{marginLeft: "135px"}}>
+                                            <button className="btn btn-outline-danger">Delete</button>
+                                            <button style={{marginLeft: "5px"}}
+                                                    className="btn btn-outline-warning"> Edit
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
-                        </div>
-                    </div>
+                        ))}
                 </div>
-            }
+            </div>
 
 
             <nav aria-label="Page navigation example" style={{marginLeft: "42vw"}}>

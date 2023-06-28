@@ -9,7 +9,7 @@ export function BookList() {
     const navigate = useNavigate();
     const [book, setBook] = useState([])
 
-    const prop=async (id,name)=>{
+    const propsDelete=async (id,name)=>{
         setIdDelete(id)
         setNameDelete(name)
     }
@@ -52,7 +52,7 @@ export function BookList() {
                                         Edit
                                     </NavLink>
                                     </button>
-                                    <button style={{marginLeft:"10px"}} type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>prop(book.id,book.title)}>
+                                    <button style={{marginLeft:"10px"}} type="button" className="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>propsDelete(book.id,book.title)}>
                                        Delete
                                     </button>
                                 </div>
