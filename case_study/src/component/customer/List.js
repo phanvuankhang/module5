@@ -1,14 +1,22 @@
 import React, {useEffect, useState} from "react";
 import CustomerService from "../../services/CustomerService";
+import {useNavigate} from "react-router-dom";
 
 export function CustomerList() {
+    const navigate = useNavigate();
     const [customer,setCustomer]=useState([]);
+    const [customerType,setCustomerType]=useState([]);
+    const fetchApi=async ()=>{
+        const result=await CustomerService.findAll()
+        setCustomer(result)
+    }
+    const fetchApi1=async ()=>{
+        const result=await CustomerService.findALlType()
+        setCustomerType(result)
+    }
     useEffect(()=>{
-        const fetchApi=async ()=>{
-            const result=await CustomerService.findAll()
-            setCustomer(result)
-        }
         fetchApi()
+        fetchApi1()
     },[])
     return (
         <>
@@ -24,7 +32,7 @@ export function CustomerList() {
                 </div>
                 <div className="col-1">
                     <button type="button" className="btn btn-outline-success">
-                        <a style={{textDecoration: "none", color: "black"}} href="/customer/create ">Add New</a>
+                        <a style={{textDecoration: "none", color: "black"}} onClick={() => navigate("/create-customer")}>Add New</a>
                     </button>
                 </div>
             </div>
@@ -47,22 +55,22 @@ export function CustomerList() {
                 </thead>
                 <tbody>
                 {
-                    customer.map(customer=>(
-                        <tr key={customer.id} className="align-middle text-center">
-                            <th>{customer.id}</th>
-                            <td>{customer.name}</td>
-                            <td>{customer.customerType}</td>
-                            <td>{customer.dateOfBirth}</td>
-                            <td>{customer.gender}</td>
-                            <td>{customer.cccd}</td>
-                            <td>{customer.phone}</td>
-                            <td>{customer.email}</td>
-                            <td>{customer.address}</td>
+                    customer.map((c)=>(
+                        <tr key={c.id} className="align-middle text-center">
+                            <th>{c.id}</th>
+                            <td>{c.name}</td>
+                            <td>{customerType.find(customer=>customer.id===c.customerType).name}</td>
+                            <td>{c.dateOfBirth}</td>
+                            <td>{c.gender}</td>
+                            <td>{c.cccd}</td>
+                            <td>{c.phone}</td>
+                            <td>{c.email}</td>
+                            <td>{c.address}</td>
                             <td>
                                 <div>
                                     <button className="btn btn-danger">Delete</button>
                                     <button style={{marginLeft: "5px"}}
-                                            className="btn btn-warning"> Edit
+                                            className="btn btn-warning" onClick={() => navigate("/edit-customer")}> Edit
                                     </button>
                                 </div>
                             </td>

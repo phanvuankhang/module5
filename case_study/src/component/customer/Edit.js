@@ -6,8 +6,8 @@ export function CustomerEdit() {
                     <div className="col-md-6">
                         <div className="card px-5 py-4">
 
-                            <div style="text-align: center">
-                                <h1 style="color: #653399">Update Customer</h1>
+                            <div style={{textAlign: "center"}}>
+                                <h1 style={{color: "#653399"}}>Update Customer</h1>
                             </div>
                             <form
                             >
@@ -64,7 +64,7 @@ export function CustomerEdit() {
                                 <div className="text-center mt-4 btn-group">
 
                                     <button type="submit" className=" btn btn-success integration"
-                                            style="background-color: #653399">
+                                            style={{backgroundColor: "#653399"}}>
                                         <b>Update</b>
                                     </button>
 

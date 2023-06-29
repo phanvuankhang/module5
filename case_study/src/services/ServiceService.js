@@ -11,7 +11,7 @@ const findAll = async () => {
 }
 const save = async (value) => {
     try {
-        const result = await axios.post('http://localhost:8080/service-list', value)
+     await axios.post('http://localhost:8080/service-list', value)
     } catch (e) {
         console.log(e)
     }

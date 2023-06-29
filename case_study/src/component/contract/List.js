@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from "react";
 import ContractService from "../../services/ContractService";
+import {useNavigate} from "react-router-dom";
 
 
 export function ContractList() {
+    const navigate = useNavigate();
     const [contract,setContract]=useState([])
     useEffect(()=>{
         const fetch=async ()=>{
@@ -25,7 +27,7 @@ export function ContractList() {
                     </div>
                     <div className="col-1">
                         <button type="button" className="btn btn-outline-success">
-                            <a style={{textDecoration: "none", color: "black"}} href="/customer/create ">Add New</a>
+                            <a style={{textDecoration: "none", color: "black"}} onClick={() => navigate("/create-contract")}>Add New</a>
                         </button>
                     </div>
                 </div>

@@ -57,55 +57,11 @@
       "size": "typicode"
     }
   ],
-  "customer-list": [
+  "customer": [
     {
       "id": 1,
       "name": "json-server",
-      "customerType": "typicode",
-      "dateOfBirth": "typicode",
-      "gender": "typicode",
-      "cccd": "typicode",
-      "phone": "typicode",
-      "email": "typicode",
-      "address": "typicode"
-    },
-    {
-      "id": 1,
-      "name": "json-server",
-      "customerType": "typicode",
-      "dateOfBirth": "typicode",
-      "gender": "typicode",
-      "cccd": "typicode",
-      "phone": "typicode",
-      "email": "typicode",
-      "address": "typicode"
-    },
-    {
-      "id": 1,
-      "name": "json-server",
-      "customerType": "typicode",
-      "dateOfBirth": "typicode",
-      "gender": "typicode",
-      "cccd": "typicode",
-      "phone": "typicode",
-      "email": "typicode",
-      "address": "typicode"
-    },
-    {
-      "id": 1,
-      "name": "json-server",
-      "customerType": "typicode",
-      "dateOfBirth": "typicode",
-      "gender": "typicode",
-      "cccd": "typicode",
-      "phone": "typicode",
-      "email": "typicode",
-      "address": "typicode"
-    },
-    {
-      "id": 1,
-      "name": "json-server",
-      "customerType": "typicode",
+      "customerType": 1,
       "dateOfBirth": "typicode",
       "gender": "typicode",
       "cccd": "typicode",
@@ -113,7 +69,7 @@
       "email": "typicode",
       "address": "typicode"
     }
-    ],
+  ],
   "contract-list": [
     {
       "id": 1,
@@ -122,54 +78,28 @@
       "endDay": "typicode",
       "deposit": "typicode",
       "amount": "typicode"
-    },
-    {
-      "id": 1,
-      "code": "json-server",
-      "startDay": "typicode",
-      "endDay": "typicode",
-      "deposit": "typicode",
-      "amount": "typicode"
-    },
-    {
-      "id": 1,
-      "code": "json-server",
-      "startDay": "typicode",
-      "endDay": "typicode",
-      "deposit": "typicode",
-      "amount": "typicode"
-    },
-    {
-      "id": 1,
-      "code": "json-server",
-      "startDay": "typicode",
-      "endDay": "typicode",
-      "deposit": "typicode",
-      "amount": "typicode"
-    },
-    {
-      "id": 1,
-      "code": "json-server",
-      "startDay": "typicode",
-      "endDay": "typicode",
-      "deposit": "typicode",
-      "amount": "typicode"
-    },
-    {
-      "id": 1,
-      "code": "json-server",
-      "startDay": "typicode",
-      "endDay": "typicode",
-      "deposit": "typicode",
-      "amount": "typicode"
-    },
-    {
-      "id": 1,
-      "code": "json-server",
-      "startDay": "typicode",
-      "endDay": "typicode",
-      "deposit": "typicode",
-      "amount": "typicode"
     }
-    ]
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ]
 }
