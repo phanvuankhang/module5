@@ -39,7 +39,7 @@ const deleteByID = async (id) => {
     }
 }
 const findALlType = () => {
-    return axios.get('http://localhost:8080/customerType').data;
+    return axios.get('http://localhost:8080/customerType');
 }
 const CustomerService = {
     findAll,

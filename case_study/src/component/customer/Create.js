@@ -2,25 +2,19 @@ import {Field, Form, Formik} from "formik";
 import {useEffect, useState} from "react";
 import CustomerService from "../../services/CustomerService";
 import {useNavigate} from "react-router-dom";
+import * as Yup from 'yup';
+import * as Swal from "sweetalert2";
 
 export function CustomerCreate() {
     const navigate=useNavigate();
-    const [customer,setCustomer]=useState([]);
     const [customerType,setCustomerType]=useState([]);
 
     useEffect(()=>{
-        const fetch=async ()=>{
-            const res= await CustomerService.save();
-            setCustomer(res);
-        }
-        fetch();
-    },[])
-    useEffect(()=>{
-        const fetch=async ()=>{
+        const findAllCustomerType=async ()=>{
             const res= await CustomerService.findALlType();
-            setCustomer(res);
+            setCustomerType(res.data);
         }
-        fetch();
+        findAllCustomerType();
     },[])
     return (
         <>
@@ -41,13 +35,44 @@ export function CustomerCreate() {
                                 "phone": "",
                                 "email": "",
                                 "address": "",
-                                "customerId": 0
+                                "customerId": 1
                             }}
-                                    validationSchema={{
-                                    }}
-                            onSubmit={(values)=>{
-                                navigate("/")
-                                CustomerService.save(values)
+                                    validationSchema={Yup.object({
+                                        // name: Yup.string()
+                                        //     .required('Không được để trống')
+                                        //     .matches(/^[A-Z][a-z]*(\s[A-Z][a-z]*)+$/,'Phải đúng định dạng tên, vd (Huynh Van A)'),
+                                        // typeId: Yup.string()
+                                        //     .required('Không được để trống'),
+                                        // birthday: Yup.date()
+                                        //     .required('Không được để trống'),
+                                        // gender: Yup.string()
+                                        //     .required('Không được để trống'),
+                                        // cmnd: Yup.string()
+                                        //     .required('Không được để trống')
+                                        //     .matches( /^\d{9}$/,'Chứng minh nhân nhân đủ 9 số'),
+                                        // phone: Yup.string()
+                                        //     .required('Không được để trống')
+                                        //     .matches(/^((\+84)|0)[0-9]{9}$/,'Số điện thoại bắt buộc 10 số bắt đầu bằng 0'),
+                                        // email: Yup.string()
+                                        //     .required('Không được để trống')
+                                        //     .matches(/^[a-zA-Z0-9+_-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "Nhập đúng định dạng Email(vd adc098@gmail.com)"),
+                                        // address:Yup.string()
+                                        //     .required('Không được để trống')
+                                    })}
+                            onSubmit={(values, {setSubmitting}) => {
+                                const create = async () => {
+                                    setSubmitting(false)
+                                    await CustomerService.save({...values,typeId: +values.typeId})
+
+                                    Swal.fire({
+                                        icon: "success",
+                                        title: "Thêm mới thành công",
+                                        timer: "2000"
+                                    })
+                                    navigate("/customer")
+
+                                }
+                                create()
                             }}>
                                 <Form>
 
@@ -57,45 +82,44 @@ export function CustomerCreate() {
                                     </div>
 
                                     <div className="mt-2 inputs"><label>Customer Type</label>
-                                            <select name="need" className="form-control"
-                                                    data-error="Please specify your need.">
-                                                <option value="0" selected disabled>--Select Customer Type--</option>
-                                                <option>Diamond</option>
-                                                <option>Platinum</option>
-                                                <option>Gold</option>
-                                                <option>Silver</option>
-                                                <option>Member</option>
-                                            </select>
+                                            <Field name="need" className="form-control"
+                                                    data-error="Please specify your need." as="select">
+                                                {customerType.map((ct)=>(
+                                                    <option key={ct.id} value={ct.id}>
+                                                        {ct.name}
+                                                    </option>
+                                                ))}
+                                            </Field>
                                     </div>
 
 
                                     <div className="mt-2 inputs"><label>Date Of Birth</label>
-                                        <Field type="date" className="form-control" id="" name="birthday"
+                                        <Field type="date" className="form-control" id="dateOfBirth" name="dateOfBirth"
                                                min="1920-01-01"/>
                                     </div>
                                     <div className="mt-2 inputs"><label>Gender</label>
-                                        <select name="need" className="form-control" required="required"
+                                        <Field name="gender" id="gender" className="form-control" as="select"
                                                 data-error="Please specify your need.">
                                             <option value="" selected disabled>--Select Gender--</option>
-                                            <option>Male</option>
-                                            <option>Female</option>
-                                        </select>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </Field>
                                     </div>
 
 
                                     <div className="mt-2 inputs"><label>CCCD Number</label>
-                                        <Field type="text" className="form-control" name="idCard"
+                                        <Field type="text" className="form-control" name="cccd" id="cccd"
                                                placeholder="9 or 12 number"/>
                                     </div>
 
                                     <div className="mt-2 inputs"><label>Phone Number</label>
-                                        <Field type="text" className="form-control" name="phoneNumber"
+                                        <Field type="text" className="form-control" name="phone" id="phone"
                                                placeholder="09xxxxxxxx/+849xxxxxxxx"/>
                                     </div>
 
 
                                     <div className="mt-2 inputs"><label>Email</label>
-                                        <Field type="text" className="form-control" name="email" placeholder="abc@abc.abc"/>
+                                        <Field type="text" className="form-control" name="email" id="email" placeholder="abc@abc.abc"/>
                                     </div>
                                     <div className="mt-2 inputs"><label>Address</label>
                                         <Field type="text" className="form-control" id="address" name="address"/>

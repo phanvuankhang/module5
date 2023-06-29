@@ -6,17 +6,17 @@ export function CustomerList() {
     const navigate = useNavigate();
     const [customer,setCustomer]=useState([]);
     const [customerType,setCustomerType]=useState([]);
-    const fetchApi=async ()=>{
+    const findAllCustomer=async ()=>{
         const result=await CustomerService.findAll()
         setCustomer(result)
     }
-    const fetchApi1=async ()=>{
+    const findAllCustomerType=async ()=>{
         const result=await CustomerService.findALlType()
-        setCustomerType(result)
+        setCustomerType(result.data)
     }
     useEffect(()=>{
-        fetchApi()
-        fetchApi1()
+        findAllCustomer()
+        findAllCustomerType()
     },[])
     return (
         <>
@@ -59,7 +59,7 @@ export function CustomerList() {
                         <tr key={c.id} className="align-middle text-center">
                             <th>{c.id}</th>
                             <td>{c.name}</td>
-                            <td>{customerType.find(customer=>customer.id===c.customerType).name}</td>
+                            <td>{customerType.find(customerType=>customerType.id===c.customerType)?.name}</td>
                             <td>{c.dateOfBirth}</td>
                             <td>{c.gender}</td>
                             <td>{c.cccd}</td>

@@ -1,5 +1,5 @@
 {
-  "service-list": [
+  "service": [
     {
       "id": 1,
       "img": "https://pix8.agoda.net/hotelImages/34612856/0/fcbf65bd1a98a65a3d42fd4c73f96229.jpg?ce=0&s=1024x768",
@@ -68,9 +68,79 @@
       "phone": "typicode",
       "email": "typicode",
       "address": "typicode"
+    },
+    {
+      "name": "asd",
+      "customerType": "",
+      "dateOfBirth": "2001-03-12",
+      "gender": "1",
+      "cccd": "12321",
+      "phone": "123123",
+      "email": "asdasd",
+      "address": "asdasd",
+      "customerId": 0,
+      "need": "5",
+      "typeId": null,
+      "id": 2
+    },
+    {
+      "name": "asd",
+      "customerType": "",
+      "dateOfBirth": "2001-03-12",
+      "gender": "Male",
+      "cccd": "sad",
+      "phone": "asdasd",
+      "email": "asdasd",
+      "address": "asdasd",
+      "customerId": 0,
+      "need": "3",
+      "typeId": null,
+      "id": 3
+    },
+    {
+      "name": "ád",
+      "customerType": "",
+      "dateOfBirth": "2022-03-12",
+      "gender": "Female",
+      "cccd": "12312",
+      "phone": "12321",
+      "email": "sadasd",
+      "address": "asdasd",
+      "customerId": 0,
+      "need": "4",
+      "typeId": null,
+      "id": 4
+    },
+    {
+      "name": "ádasd",
+      "customerType": "",
+      "dateOfBirth": "4421-03-12",
+      "gender": "Female",
+      "cccd": "qwqwe",
+      "phone": "wqe",
+      "email": "qweqwe",
+      "address": "qweqwe",
+      "customerId": 0,
+      "need": "4",
+      "typeId": null,
+      "id": 5
+    },
+    {
+      "name": "asd",
+      "customerType": "",
+      "dateOfBirth": "2123-03-12",
+      "gender": "Female",
+      "cccd": "qwe",
+      "phone": "asdasd",
+      "email": "asdasd",
+      "address": "sadasd",
+      "customerId": 1,
+      "need": "4",
+      "typeId": null,
+      "id": 6
     }
   ],
-  "contract-list": [
+  "contract": [
     {
       "id": 1,
       "code": "json-server",
