@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Macbook",
+      "price": 1500,
+      "productTypeId": 2
+    },
+    {
+      "name": "iphone 12",
+      "price": 999,
+      "productTypeId": 0,
+      "id": 2
+    },
+    {
+      "name": "iphone 15",
+      "price": 121212,
+      "productTypeId": 2,
+      "id": 3
+    },
+    {
+      "name": "iphone 14",
+      "price": 999,
+      "productTypeId": 1,
+      "id": 4
+    },
+    {
+      "name": "assd",
+      "price": 3545345,
+      "productTypeId": 1,
+      "id": 5
+    }
+  ],
+  "productTypes": [
+    {
+      "id": 1,
+      "name": "Mobile"
+    },
+    {
+      "id": 2,
+      "name": "Laptop"
+    }
+  ]
+}

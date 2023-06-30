@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import ContractService, {findAll} from "../../services/ContractService";
 import {useNavigate} from "react-router-dom";
+import {findAll} from "../../services/ContractService";
 
 
 export function ContractList() {
@@ -41,7 +41,6 @@ export function ContractList() {
                         <th scope="col">End Day</th>
                         <th scope="col">Deposit</th>
                         <th scope="col">Total payment amount</th>
-                        <th scope="col">Actions</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -54,14 +53,6 @@ export function ContractList() {
                                 <td>{contract.endDay}</td>
                                 <td>{contract.deposit}</td>
                                 <td>{contract.amount}</td>
-                                <td>
-                                    <div>
-                                        <button className="btn btn-danger">Delete</button>
-                                        <button style={{marginLeft: "5px"}}
-                                                className="btn btn-warning"> Edit
-                                        </button>
-                                    </div>
-                                </td>
                             </tr>
                         ))
                     }

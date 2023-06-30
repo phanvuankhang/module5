@@ -83,12 +83,12 @@ export function CustomerList() {
                                 <td>
                                     <div>
                                         <button type="button" className="btn btn-danger" data-bs-toggle="modal"
-                                                data-bs-target="#exampleModal" onClick={()=>propsDelete(customer.id,customer.name)}>
+                                                data-bs-target="#exampleModal" onClick={()=>propsDelete(c.id,c.name)}>
                                             Delete
                                         </button>
                                         <button style={{marginLeft: "5px"}}
                                                 className="btn btn-warning"
-                                                onClick={() => navigate('/customer/edit-form')}> Edit
+                                                onClick={() => navigate(`/customer/${c.id}/edit-form`)}> Edit
                                         </button>
                                     </div>
                                 </td>

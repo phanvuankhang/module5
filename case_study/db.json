@@ -55,13 +55,28 @@
       "name": "json-server",
       "price": "typicode",
       "size": "typicode"
+    },
+    {
+      "id": 2,
+      "typeId": 1,
+      "name": "asd",
+      "area": 132,
+      "rentalCost": 32423,
+      "maxPeople": "23",
+      "rentalType": "Month",
+      "descriptionOtherAmenities": "sdfsdf",
+      "roomStandard": "sdfsdf",
+      "floors": "sdfsdf",
+      "areaSwimming": "sdfsdf",
+      "freeServiceIncluded": "sdfsdf",
+      "img": "dsfsdfsdf"
     }
   ],
   "customer": [
     {
       "id": 1,
       "name": "asdasd",
-      "customerTypeId": 2,
+      "customerTypeId": 5,
       "dateOfBirth": "2344-03-12",
       "gender": "Male",
       "cccd": "asdasd",
@@ -81,15 +96,15 @@
       "id": 2
     },
     {
-      "name": "ád",
+      "id": 3,
+      "name": "asdasdasd",
       "customerTypeId": 1,
       "dateOfBirth": "3243-02-23",
       "gender": "Female",
       "cccd": "ádasd",
       "phone": "ádasdasd",
       "email": "ádasd",
-      "address": "ádasdasd",
-      "id": 3
+      "address": "ádasdasd"
     }
   ],
   "contract": [
@@ -122,6 +137,20 @@
     {
       "id": 5,
       "name": "Member"
+    }
+  ],
+  "typeService": [
+    {
+      "id": 1,
+      "name": "House"
+    },
+    {
+      "id": 2,
+      "name": "Room"
+    },
+    {
+      "id": 3,
+      "name": "Villa"
     }
   ]
 }

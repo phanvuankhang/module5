@@ -9,7 +9,7 @@ export const save = (customer) => {
     return axios.post("http://localhost:8080/customer", customer);
 };
 
-export const edit = async (customer) => {
+export const edit = (customer) => {
     return axios.put("http://localhost:8080/customer/" + customer.id, customer);
 };
 

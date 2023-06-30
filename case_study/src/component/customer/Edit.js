@@ -44,15 +44,15 @@ export function CustomerEdit() {
                                 <h1 style={{color: "#653399"}}>Edit Customer</h1>
                             </div>
                             <Formik initialValues={{
-
+                                id:customer?.id,
                                 name: customer?.name,
                                 customerTypeId: customer?.customerTypeId,
                                 dateOfBirth: customer?.dateOfBirth,
                                 gender: customer?.gender,
                                 cccd: customer?.cccd,
                                 phone: customer?.phone,
-                                email: customer?.email,
-                                address: customer?.address,
+                                email:customer?.email,
+                                address:customer?.address,
                             }}
                                     validationSchema={Yup.object({
                                         // name: Yup.string()

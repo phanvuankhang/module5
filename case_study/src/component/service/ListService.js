@@ -40,7 +40,7 @@ export function ListService() {
 
             <button className="btn btn-success"
                     style={{marginTop: "20px", marginLeft: "45vw", background: "#653399"}}
-                    onClick={() => navigate("/create-services")}>Add New Service
+                    onClick={() => navigate("/create-service")}>Add New Service
             </button>
 
             <div className="container d-flex justify-content-center">
@@ -68,7 +68,7 @@ export function ListService() {
                                         <div style={{marginLeft: "135px"}}>
                                             <button className="btn btn-outline-danger">Delete</button>
                                             <button style={{marginLeft: "5px"}}
-                                                    className="btn btn-outline-warning"> Edit
+                                                    className="btn btn-outline-warning" onClick={()=>navigate(`/${service.id}/edit-form`)}> Edit
                                             </button>
                                         </div>
                                     </div>
