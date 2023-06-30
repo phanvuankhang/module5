@@ -1,11 +1,11 @@
-import Form from "react-validation/src/components/form";
 import React from "react";
-import {Field, Formik} from "formik";
+import {Field, Form,Formik} from "formik";
 
 export function EditVilla() {
+    
     return(
         <>
-            <Formik initialValues={}>
+            <Formik initialValues={} onSubmit={}>
                 <div className="container mt-5 mb-5">
                     <div className="row height d-flex justify-content-center align-items-center">
                         <div className="col-md-6">

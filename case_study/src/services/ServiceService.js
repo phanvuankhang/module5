@@ -1,48 +1,17 @@
 import axios from "axios";
 
-
-const findAll = async () => {
-    try {
-        const result = await axios.get('http://localhost:8080/service')
-        return result.data
-    } catch (e) {
-        console.log(e)
-    }
+export const findAll = async () => {
+    return await axios.get("http://localhost:8080/service");
 }
-const save = async (value) => {
-    try {
-     await axios.post('http://localhost:8080/service', value)
-    } catch (e) {
-        console.log(e)
-    }
+export const save = async (service) => {
+    return  await axios.post('http://localhost:8080/service', service)
 }
-const edit = async (id, value) => {
-    try {
-        const result = await axios.put(`http://localhost:8080/service/${id}`, value)
-    } catch (e) {
-        console.log(e)
-    }
+export const edit = async (service) => {
+    return await axios.put("http://localhost:8080/service/" + service.id, service)
 }
-const findById = async (id) => {
-    try {
-        const result = await axios.get(`http://localhost:8080/service/${id}`)
-        return result.data;
-    } catch (e) {
-        console.log(e)
-    }
+export const findById = async (id) => {
+    return await axios.get("http://localhost:8080/service/" + id)
 }
-const deleteByID = async (id) => {
-    try {
-        const result = await axios.delete(`http://localhost:8080/service/${id}`)
-    } catch (e) {
-        console.log(e)
-    }
+export const deleteByID = async (id) => {
+    return await axios.delete("http://localhost:8080/service/" + id)
 }
-const ServiceService = {
-    findAll,
-    save,
-    edit,
-    findById,
-    deleteByID
-}
-export default ServiceService;

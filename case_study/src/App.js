@@ -5,13 +5,12 @@ import {Routes, Route} from 'react-router-dom'
 import {ListService} from "./component/service/ListService";
 import {Header} from "./component/Header";
 import {Footer} from "./component/Footer";
-import {useNavigate} from "react-router-dom";
 import {CustomerList} from "./component/customer/List";
 import {ContractList} from "./component/contract/List";
-import {CreateService} from "./component/service/Create";
 import {CustomerCreate} from "./component/customer/Create";
 import {CustomerEdit} from "./component/customer/Edit";
 import {ContractCreate} from "./component/contract/Create";
+import {CreateService} from "./component/service/Create";
 
 function App() {
     return (
@@ -22,9 +21,9 @@ function App() {
                 <Route path='/customer' element={<CustomerList/>}/>
                 <Route path='/contract' element={<ContractList/>}/>
                 <Route path='/create-service' element={<CreateService/>}/>
-                <Route path='/create-customer' element={<CustomerCreate/>}/>
-                <Route path='/edit-customer' element={<CustomerEdit/>}/>
-                <Route path='/create-contract' element={<ContractCreate/>}/>
+                <Route path='/customer/create-form' element={<CustomerCreate/>}/>
+                <Route path='/customer/edit-form' element={<CustomerEdit/>}/>
+                <Route path='/contract/create-form' element={<ContractCreate/>}/>
             </Routes>
             <Footer/>
         </>

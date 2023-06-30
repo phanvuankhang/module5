@@ -2,19 +2,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './listService.css'
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
-import ServiceService from "../../services/ServiceService";
-
+import {findAll} from "../../services/ServiceService";
 
 export function ListService() {
     const navigate = useNavigate();
     const [service, setService] = useState([]);
+
+    const getListService = async () => {
+        const res = await findAll();
+        setService(res.data);
+    }
     useEffect(() => {
-        const fetchApi = async () => {
-            const result = await ServiceService.findAll()
-            setService(result)
-        }
-        fetchApi();
-    }, [])
+        getListService();
+    }, []);
+
     return (
         <>
 
@@ -37,7 +38,8 @@ export function ListService() {
             </header>
 
 
-            <button className="btn btn-success" style={{marginTop: "20px", marginLeft: "45vw", background: "#653399"}}
+            <button className="btn btn-success"
+                    style={{marginTop: "20px", marginLeft: "45vw", background: "#653399"}}
                     onClick={() => navigate("/create-services")}>Add New Service
             </button>
 
@@ -46,13 +48,15 @@ export function ListService() {
                     {
                         service.map(service => (
                             <div className="col-md-3">
-                                < div className="card" style={{marginTop:"25px"}}>
-                                    <div><img src={service.img} width="400px" height="200px" className="img-responsive image"/>
+                                < div className="card" style={{marginTop: "25px"}}>
+                                    <div><img src={service.img} width="400px" height="200px"
+                                              className="img-responsive image"/>
                                     </div>
                                     <p className="rating">9.2</p>
                                     <div className="card-body">
                                         <h5 className="card-title">{service.name}</h5>
-                                        <p className="card-text"><i className="fa fa-map-marker marker"></i> Room size:
+                                        <p className="card-text"><i className="fa fa-map-marker marker"></i> Room
+                                            size:
                                             {service.size}
                                             m2
                                         </p>

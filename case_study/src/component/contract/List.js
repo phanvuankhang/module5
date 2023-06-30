@@ -1,18 +1,18 @@
 import React, {useEffect, useState} from "react";
-import ContractService from "../../services/ContractService";
+import ContractService, {findAll} from "../../services/ContractService";
 import {useNavigate} from "react-router-dom";
 
 
 export function ContractList() {
     const navigate = useNavigate();
-    const [contract,setContract]=useState([])
+    const [contract,setContract]=useState([]);
     useEffect(()=>{
-        const fetch=async ()=>{
-            const result=await ContractService.findAll()
-            setContract(result)
+        const getListContract=async ()=>{
+            const res=await findAll();
+            setContract(res.data);
         }
-        fetch()
-    },[])
+        getListContract();
+    },[]);
     return (
         <>
             <div>
@@ -27,7 +27,7 @@ export function ContractList() {
                     </div>
                     <div className="col-1">
                         <button type="button" className="btn btn-outline-success">
-                            <a style={{textDecoration: "none", color: "black"}} onClick={() => navigate("/create-contract")}>Add New</a>
+                            <a style={{textDecoration: "none", color: "black"}} onClick={() => navigate("/contract/create-form")}>Add New</a>
                         </button>
                     </div>
                 </div>

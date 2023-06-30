@@ -1,20 +1,20 @@
 import {Field, Form, Formik} from "formik";
 import {useEffect, useState} from "react";
-import CustomerService from "../../services/CustomerService";
 import {useNavigate} from "react-router-dom";
 import * as Yup from 'yup';
 import * as Swal from "sweetalert2";
+import {findAllCustomerType, save} from "../../services/CustomerService";
 
 export function CustomerCreate() {
     const navigate=useNavigate();
     const [customerType,setCustomerType]=useState([]);
 
     useEffect(()=>{
-        const findAllCustomerType=async ()=>{
-            const res= await CustomerService.findALlType();
+        const getListCustomerType=async ()=>{
+            const res= await findAllCustomerType();
             setCustomerType(res.data);
         }
-        findAllCustomerType();
+        getListCustomerType();
     },[])
     return (
         <>
@@ -27,15 +27,14 @@ export function CustomerCreate() {
                                 <h1 style={{color: "#653399"}}>Create Customer</h1>
                             </div>
                             <Formik initialValues={{
-                                "name": "",
-                                "customerType": "",
-                                "dateOfBirth": "",
-                                "gender": "",
-                                "cccd": "",
-                                "phone": "",
-                                "email": "",
-                                "address": "",
-                                "customerId": 1
+                                name: "",
+                                customerTypeId: 0,
+                                dateOfBirth: "",
+                                gender: "",
+                                cccd: "",
+                                phone: "",
+                                email: "",
+                                address: "",
                             }}
                                     validationSchema={Yup.object({
                                         // name: Yup.string()
@@ -59,10 +58,9 @@ export function CustomerCreate() {
                                         // address:Yup.string()
                                         //     .required('Không được để trống')
                                     })}
-                            onSubmit={(values, {setSubmitting}) => {
-                                const create = async () => {
+                            onSubmit={ async (values, {setSubmitting}) => {
                                     setSubmitting(false)
-                                    await CustomerService.save({...values,typeId: +values.typeId})
+                                    await save({...values,customerTypeId: +values.customerTypeId})
 
                                     Swal.fire({
                                         icon: "success",
@@ -70,9 +68,6 @@ export function CustomerCreate() {
                                         timer: "2000"
                                     })
                                     navigate("/customer")
-
-                                }
-                                create()
                             }}>
                                 <Form>
 
@@ -82,10 +77,10 @@ export function CustomerCreate() {
                                     </div>
 
                                     <div className="mt-2 inputs"><label>Customer Type</label>
-                                            <Field name="need" className="form-control"
-                                                    data-error="Please specify your need." as="select">
-                                                {customerType.map((ct)=>(
-                                                    <option key={ct.id} value={ct.id}>
+                                            <Field name="customerTypeId" id="customerTypeId" className="form-control" as="select">
+                                                <option value={0}>--Select Customer Type--</option>
+                                                {customerType.map((ct,index)=>(
+                                                    <option key={index} value={ct.id}>
                                                         {ct.name}
                                                     </option>
                                                 ))}
@@ -133,7 +128,7 @@ export function CustomerCreate() {
                                     </div>
                                     <div className="text-center mt-4 btn-group">
 
-                                        <button className=" btn btn-dark ">
+                                        <button onClick={()=>navigate('/customer')} className=" btn btn-dark ">
                                             <b>Back</b>
                                         </button>
 
