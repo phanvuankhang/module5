@@ -58,18 +58,33 @@
     },
     {
       "id": 2,
-      "typeId": 1,
-      "name": "asd",
-      "area": 132,
-      "rentalCost": 32423,
-      "maxPeople": "23",
-      "rentalType": "Month",
-      "descriptionOtherAmenities": "sdfsdf",
-      "roomStandard": "sdfsdf",
-      "floors": "sdfsdf",
-      "areaSwimming": "sdfsdf",
-      "freeServiceIncluded": "sdfsdf",
-      "img": "dsfsdfsdf"
+      "typeId": 2,
+      "name": "asdasd",
+      "area": 32,
+      "rentalCost": 123,
+      "maxPeople": "123",
+      "rentalType": "Day",
+      "descriptionOtherAmenities": "sadasd",
+      "roomStandard": "asdasd",
+      "floors": "sadasd",
+      "areaSwimming": "asdasd",
+      "freeServiceIncluded": "asdasd",
+      "img": "https://pix8.agoda.net/hotelImages/109/10953/10953_17080818360055125836.jpg?ca=13&ce=1&s=1024x768"
+    },
+    {
+      "id": 3,
+      "typeId": 3,
+      "name": "213",
+      "area": 1234,
+      "rentalCost": 123,
+      "maxPeople": "123",
+      "rentalType": "Day",
+      "descriptionOtherAmenities": "123123",
+      "roomStandard": "",
+      "floors": "",
+      "areaSwimming": "",
+      "freeServiceIncluded": "",
+      "img": "https://pix8.agoda.net/hotelImages/109/10953/10953_17080818360055125836.jpg?ca=13&ce=1&s=1024x768"
     }
   ],
   "customer": [
@@ -115,6 +130,14 @@
       "endDay": "typicode",
       "deposit": "typicode",
       "amount": "typicode"
+    },
+    {
+      "code": "992783",
+      "startDay": "2123-03-12",
+      "endDay": "3232-02-21",
+      "deposit": 1231,
+      "amount": 123,
+      "id": 2
     }
   ],
   "customerType": [

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const findAll = () => {
-    return axios.get("http://localhost:8080/service");
+    return axios.get("http://localhost:8080/service?_sort=id&order=decs");
 }
 export const save = (service) => {
     return axios.post("http://localhost:8080/service", service)

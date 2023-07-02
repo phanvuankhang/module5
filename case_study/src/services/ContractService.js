@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 export const findAll =  () => {
-    return  axios.get("http://localhost:8080/contract");
+    return  axios.get("http://localhost:8080/contract?_sort=id&_order=desc");
 }
 export const save =  (contract) => {
     return   axios.post('http://localhost:8080/contract', contract)

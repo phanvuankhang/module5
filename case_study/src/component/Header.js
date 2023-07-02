@@ -28,12 +28,8 @@ export function Header() {
                                     <ul className="dropdown-menu">
                                         <li><a className="dropdown-item" onClick={()=>navigate('/customer')}>Customer</a></li>
                                         <li><a className="dropdown-item" onClick={()=>navigate('/contract')}>Contract</a></li>
-                                        <li><a className="dropdown-item" href="#">Something else here</a></li>
                                     </ul>
                                 </li>
-                                <li className="nav-item"><a className="nav-link" href="#">Features</a></li>
-                                <li className="nav-item"><a className="nav-link" href="#">About Us</a></li>
-                                <li className="nav-item"><a className="nav-link" href="#">Contact</a></li>
                             </ul>
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item active"><a className="nav-link" href="#"><i

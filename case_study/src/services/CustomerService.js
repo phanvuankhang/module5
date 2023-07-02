@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 export const findAll = () => {
-    return axios.get("http://localhost:8080/customer");
+    return axios.get("http://localhost:8080/customer?_sort=id&_order=desc");
 };
 
 export const save = (customer) => {

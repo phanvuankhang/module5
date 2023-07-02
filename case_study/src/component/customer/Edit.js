@@ -8,7 +8,7 @@ import * as Yup from "yup";
 export function CustomerEdit() {
     const navigate = useNavigate();
     const [customerType, setCustomerType] = useState([]);
-    const params=useParams();
+    const params = useParams();
     const [customer, setCustomer] = useState();
 
 
@@ -35,59 +35,61 @@ export function CustomerEdit() {
 
     return (
         <>
-            <div className="container mt-5 mb-5">
-                <div className="row height d-flex justify-content-center align-items-center">
-                    <div className="col-md-6">
-                        <div className="card px-5 py-4">
 
-                            <div style={{textAlign: "center"}}>
-                                <h1 style={{color: "#653399"}}>Edit Customer</h1>
-                            </div>
-                            <Formik initialValues={{
-                                id:customer?.id,
-                                name: customer?.name,
-                                customerTypeId: customer?.customerTypeId,
-                                dateOfBirth: customer?.dateOfBirth,
-                                gender: customer?.gender,
-                                cccd: customer?.cccd,
-                                phone: customer?.phone,
-                                email:customer?.email,
-                                address:customer?.address,
-                            }}
-                                    validationSchema={Yup.object({
-                                        // name: Yup.string()
-                                        //     .required('Không được để trống')
-                                        //     .matches(/^[A-Z][a-z]*(\s[A-Z][a-z]*)+$/,'Phải đúng định dạng tên, vd (Huynh Van A)'),
-                                        // typeId: Yup.string()
-                                        //     .required('Không được để trống'),
-                                        // birthday: Yup.date()
-                                        //     .required('Không được để trống'),
-                                        // gender: Yup.string()
-                                        //     .required('Không được để trống'),
-                                        // cmnd: Yup.string()
-                                        //     .required('Không được để trống')
-                                        //     .matches( /^\d{9}$/,'Chứng minh nhân nhân đủ 9 số'),
-                                        // phone: Yup.string()
-                                        //     .required('Không được để trống')
-                                        //     .matches(/^((\+84)|0)[0-9]{9}$/,'Số điện thoại bắt buộc 10 số bắt đầu bằng 0'),
-                                        // email: Yup.string()
-                                        //     .required('Không được để trống')
-                                        //     .matches(/^[a-zA-Z0-9+_-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "Nhập đúng định dạng Email(vd adc098@gmail.com)"),
-                                        // address:Yup.string()
-                                        //     .required('Không được để trống')
-                                    })}
-                                    onSubmit={async (values, {setSubmitting}) => {
-                                        setSubmitting(false)
-                                        await edit({...values, customerTypeId: +values.customerTypeId});
+            <Formik initialValues={{
+                id: customer?.id,
+                name: customer?.name,
+                customerTypeId: customer?.customerTypeId,
+                dateOfBirth: customer?.dateOfBirth,
+                gender: customer?.gender,
+                cccd: customer?.cccd,
+                phone: customer?.phone,
+                email: customer?.email,
+                address: customer?.address,
+            }}
+                    validationSchema={Yup.object({
+                        // name: Yup.string()
+                        //     .required('Không được để trống')
+                        //     .matches(/^[A-Z][a-z]*(\s[A-Z][a-z]*)+$/,'Phải đúng định dạng tên, vd (Huynh Van A)'),
+                        // typeId: Yup.string()
+                        //     .required('Không được để trống'),
+                        // birthday: Yup.date()
+                        //     .required('Không được để trống'),
+                        // gender: Yup.string()
+                        //     .required('Không được để trống'),
+                        // cmnd: Yup.string()
+                        //     .required('Không được để trống')
+                        //     .matches( /^\d{9}$/,'Chứng minh nhân nhân đủ 9 số'),
+                        // phone: Yup.string()
+                        //     .required('Không được để trống')
+                        //     .matches(/^((\+84)|0)[0-9]{9}$/,'Số điện thoại bắt buộc 10 số bắt đầu bằng 0'),
+                        // email: Yup.string()
+                        //     .required('Không được để trống')
+                        //     .matches(/^[a-zA-Z0-9+_-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "Nhập đúng định dạng Email(vd adc098@gmail.com)"),
+                        // address:Yup.string()
+                        //     .required('Không được để trống')
+                    })}
+                    onSubmit={async (values, {setSubmitting}) => {
+                        setSubmitting(false)
+                        await edit({...values, customerTypeId: +values.customerTypeId});
 
-                                        Swal.fire({
-                                            icon: "success",
-                                            title: "Thêm mới thành công",
-                                            timer: "2000"
-                                        });
-                                        navigate("/customer");
-                                    }}>
-                                <Form>
+                        Swal.fire({
+                            icon: "success",
+                            title: "Thêm mới thành công",
+                            timer: "2000"
+                        });
+                        navigate("/customer");
+                    }}>
+
+                <Form>
+                    <div className="container mt-5 mb-5">
+                        <div className="row height d-flex justify-content-center align-items-center">
+                            <div className="col-md-6">
+                                <div className="card px-5 py-4">
+
+                                    <div style={{textAlign: "center"}}>
+                                        <h1 style={{color: "#653399"}}>Edit Customer</h1>
+                                    </div>
                                     <div className="mt-4 inputs"><label>Customer Name</label>
                                         <Field type="text" className="form-control" id="name" name="name"
                                                placeholder="Enter your full name"/>
@@ -140,8 +142,7 @@ export function CustomerEdit() {
                                         <Field type="text" className="form-control" id="address" name="address"/>
                                     </div>
                                     <div className="text-center mt-4 btn-group">
-
-                                        <button type="submit" className=" btn btn-success integration"
+                                        <button type="submit" className=" btn btn-success"
                                                 style={{backgroundColor: "#653399"}}>
                                             <b>Update</b>
                                         </button>
@@ -151,14 +152,14 @@ export function CustomerEdit() {
                                         <button onClick={() => navigate('/customer')} className=" btn btn-dark ">
                                             <b>Back</b>
                                         </button>
-
                                     </div>
-                                </Form>
-                            </Formik>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </Form>
+            </Formik>
+
         </>
     )
 }
