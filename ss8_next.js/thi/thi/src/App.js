@@ -1,26 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-import {Routes,Route} from 'react-router-dom'
 import React from "react";
-import Header from "./components/Header";
-import HomePage from "./components/Home";
-import ListProductsPage from "./components/ListProducts";
-import CreateProductPage from "./components/CreateProduct";
-import UpdateProductPage from "./components/UpdateProduct";
+import {Route, Routes} from "react-router-dom";
+import {HomePage} from "./component/Home";
+
+import {ProductList} from "./component/List";
+import Header from "./component/Header";
+import {CreateProduct} from "./component/Create";
+import {EditProduct} from "./component/Edit";
 
 function App() {
-  return (
-      <>
-
-          <Header />
-          <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/products" element={<ListProductsPage />} />
-              <Route path="/products/creation-form" element={<CreateProductPage />} />
-              <Route path="/products/:id/edit-form" element={<UpdateProductPage />} />
-          </Routes>
-      </>
-  );
+    return (
+        <>
+            <Header/>
+            <Routes>
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/product" element={<ProductList/>}/>
+                <Route path="/product/create-form" element={<CreateProduct/>}/>
+                <Route path="/product/:id/edit-form" element={<EditProduct/>}/>
+            </Routes>
+        </>
+    );
 }
 
 export default App;

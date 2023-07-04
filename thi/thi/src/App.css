@@ -36,13 +36,7 @@
     transform: rotate(360deg);
   }
 }
-ul{
-display: flex;
-  list-style: none;
-}
-ul li{
-margin-left: 20px;
-}
+
 .error{
   color: red;
 }
