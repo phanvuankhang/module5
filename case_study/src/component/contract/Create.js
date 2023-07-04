@@ -1,7 +1,8 @@
-import {Field, Form, Formik} from "formik";
+import {ErrorMessage, Field, Form, Formik} from "formik";
 import Swal from "sweetalert2";
 import {useNavigate} from "react-router-dom";
 import {save} from "../../services/ContractService";
+import * as Yup from 'yup';
 
 export function ContractCreate() {
     const navigate = useNavigate();
@@ -13,7 +14,22 @@ export function ContractCreate() {
                 endDay: "",
                 deposit: "",
                 amount: ""
-            }} onSubmit={async (values, {setSubmitting}) => {
+            }}
+                    validationSchema={Yup.object({
+                        startDay: Yup.date()
+                            .required('Không được để trống'),
+                        endDay: Yup.date()
+                            .required('Không được để trống'),
+                        deposit: Yup.number()
+                            .required('Không được để trống')
+                            .min(100, 'Lớn hơn 100'),
+                        customerId: Yup.string()
+                            .required('Không được để trống')
+                            .min(1),
+                        serviceId: Yup.string()
+                            .required('Không được để trống'),
+                    })}
+                    onSubmit={async (values, {setSubmitting}) => {
                 setSubmitting(false);
                 await save({...values});
 
@@ -37,25 +53,30 @@ export function ContractCreate() {
                                     <div className="mt-4 inputs"><label>Contract Code</label>
                                         <Field type="text" className="form-control" id="code" name="code"
                                                min="1920-01-01"/>
+                                        <ErrorMessage name="code" component="span" className="error-r"/>
                                     </div>
                                     <div className="mt-4 inputs"><label>Start Day</label>
                                         <Field type="date" className="form-control" id="startDay" name="startDay"
                                                min="1920-01-01"/>
+                                        <ErrorMessage name="startDay" component="span" className="error-r"/>
                                     </div>
 
                                     <div className="mt-2 inputs"><label>End Day</label>
                                         <Field type="date" className="form-control" id="endDay" name="endDay"
                                                min="1920-01-01"/>
+                                        <ErrorMessage name="endDay" component="span" className="error-r"/>
                                     </div>
 
 
                                     <div className="mt-2 inputs"><label>Deposit</label>
                                         <Field type="number" className="form-control" id="deposit" name="deposit"/>
+                                        <ErrorMessage name="deposit" component="span" className="error-r"/>
                                     </div>
 
                                     <div className="mt-2 inputs"><label>Total payment amount</label>
                                         <Field type="number" className="form-control" name="amount"
                                                id="amount"/>
+                                        <ErrorMessage name="amount" component="span" className="error-r"/>
                                     </div>
 
                                     <div className="text-center mt-4 btn-group">
