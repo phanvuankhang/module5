@@ -34,6 +34,7 @@ export function CreateProduct() {
                 totalMoney: 0,
                 quantity: 0,
                 product: "",
+                price:0
             }}
                     onSubmit={async (values, {setSubmitting}) => {
                         setSubmitting(false);
