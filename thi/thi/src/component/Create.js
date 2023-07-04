@@ -62,8 +62,8 @@ export function CreateProduct() {
                                     <div className=" mt-4 inputs">
                                         <label>Sản phẩm</label>
                                         <Field className="form-control" name="typeId"
-                                               id="typeId" as="select">
-                                            <option value={0}>Chọn Sản Phẩm</option>
+                                               id="typeId" as="select" onClick={(val) => getProduct(val.target.value)}>
+                                            <option value="">Chọn Sản Phẩm</option>
                                             {
                                                 orders.map((o) => (
                                                     <option key={o.id} value={o.id}>
