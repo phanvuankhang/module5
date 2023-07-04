@@ -8,7 +8,17 @@ import {useEffect, useState} from "react";
 export function CreateProduct() {
     const navigate = useNavigate();
     const [orders, setOrders] = useState([]);
+    const [product, setProduct] = useState([]);
 
+    const getProduct =async (id) =>{
+
+        for (let index = 0; index < orders.length; index++) {
+            if(orders[index].id === id){
+                setProduct(orders[index])
+            }
+
+        }
+    }
     const getListOrders = async () => {
         const res = await getListOrdersAPI();
         setOrders(res.data);
@@ -23,12 +33,13 @@ export function CreateProduct() {
                 dateBuy: "",
                 totalMoney: 0,
                 quantity: 0,
+                product: "",
             }}
                     onSubmit={async (values, {setSubmitting}) => {
                         setSubmitting(false);
                         await createOrdersAPI({
-                            ...values,
-                            totalMoney: values.product.price * values.quantity
+                            ...values,product:product,
+                            totalMoney: product.price * values.quantity
                         })
                         navigate("/")
                         await Swal.fire({

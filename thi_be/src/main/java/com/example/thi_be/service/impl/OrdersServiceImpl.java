@@ -30,7 +30,7 @@ public class OrdersServiceImpl implements IOrdersService {
 
     @Override
     public Boolean createOrder(Orders orders) {
-        ordersRepository.createOrder(orders.getQuantity(),orders.getProduct().getPrice(),orders.getProduct().getId());
+        ordersRepository.createOrder(orders.getQuantity(),orders.getTotalMoney(),orders.getProduct().getId());
         return true;
     }
 
