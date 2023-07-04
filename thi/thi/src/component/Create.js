@@ -13,7 +13,7 @@ export function CreateProduct() {
     const getProduct =async (id) =>{
 
         for (let index = 0; index < orders.length; index++) {
-            if(orders[index].id === id){
+            if(orders[index].id == id){
                 setProduct(orders[index])
             }
 
@@ -27,6 +27,9 @@ export function CreateProduct() {
         getListOrders()
     }, [])
 
+    if (!orders) {
+        return null
+    }
     return (
         <>
             <Formik initialValues={{
